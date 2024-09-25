@@ -135,6 +135,19 @@ WantedBy=multi-user.target
 EOF
 ```
 
+### Edit the service file
+```
+sudo nano /etc/systemd/system/hemid.service
+```
+
+Ensure that the environment variable is set inside the file, like this:
+
+**Environment="POPM_BTC_PRIVKEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"**
+
+Now save File :
+
+Save : Ctrl + o , hit enter
+exit : Ctrl + x
 
 ### Start Miner service
 ```
