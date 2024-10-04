@@ -151,7 +151,9 @@ exit : Ctrl + x
 
 ### Start Miner service
 ```
-sudo systemctl daemon-reload && sudo systemctl enable hemid.service && sudo systemctl start hemid.service
+sudo systemctl daemon-reload
+sudo systemctl enable hemid.service
+sudo systemctl start hemid.service
 ```
 
 
