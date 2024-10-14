@@ -195,7 +195,7 @@ node_menu() {
     print_info ""  
 
     # Prompt the user for input
-    read -p "Enter your choice (1, - 7): " user_choice
+    read -p "Enter your choice (1 to 7): " user_choice
     
     # Handle user input
     case $user_choice in
