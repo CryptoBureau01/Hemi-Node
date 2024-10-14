@@ -107,21 +107,23 @@ service_update() {
             print_info "Old Hemi service file deleted."
         fi
 
-        # Write the new service file
-        echo "[Unit]" | sudo tee $service_file
-        echo "Description=Hemi testnet pop tx Service" | sudo tee -a $service_file
-        echo "After=network.target" | sudo tee -a $service_file
-        echo "" | sudo tee -a $service_file
-        echo "[Service]" | sudo tee -a $service_file
-        echo "WorkingDirectory=/root/hami/heminetwork_v0.4.5_linux_amd64" | sudo tee -a $service_file
-        echo "ExecStart=/root/hami/heminetwork_v0.4.5_linux_amd64/popmd" | sudo tee -a $service_file
-        echo "Environment=\"POPM_BTC_PRIVKEY=$private_key\"" | sudo tee -a $service_file
-        echo "Environment=\"POPM_STATIC_FEE=200\"" | sudo tee -a $service_file
-        echo "Environment=\"POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public\"" | sudo tee -a $service_file
-        echo "Restart=on-failure" | sudo tee -a $service_file
-        echo "" | sudo tee -a $service_file
-        echo "[Install]" | sudo tee -a $service_file
-        echo "WantedBy=multi-user.target" | sudo tee -a $service_file
+        # Write the new service file in the background without echoing
+        sudo bash -c "cat > $service_file" <<-EOF
+[Unit]
+Description=Hemi testnet pop tx Service
+After=network.target
+
+[Service]
+WorkingDirectory=/root/hami/heminetwork_v0.4.5_linux_amd64
+ExecStart=/root/hami/heminetwork_v0.4.5_linux_amd64/popmd
+Environment="POPM_BTC_PRIVKEY=$private_key"
+Environment="POPM_STATIC_FEE=200"
+Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
 
         print_info "Hemi service setup complete."
         
@@ -137,6 +139,7 @@ service_update() {
     # Call the node_menu function
     node_menu
 }
+
 
 
 
