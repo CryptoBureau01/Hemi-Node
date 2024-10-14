@@ -113,8 +113,8 @@ service_update() {
         echo "After=network.target" | sudo tee -a $service_file
         echo "" | sudo tee -a $service_file
         echo "[Service]" | sudo tee -a $service_file
-        echo "WorkingDirectory=/root/heminetwork_v0.4.5_linux_amd64" | sudo tee -a $service_file
-        echo "ExecStart=/root/heminetwork_v0.4.5_linux_amd64/popmd" | sudo tee -a $service_file
+        echo "WorkingDirectory=/root/hami/heminetwork_v0.4.5_linux_amd64" | sudo tee -a $service_file
+        echo "ExecStart=/root/hami/heminetwork_v0.4.5_linux_amd64/popmd" | sudo tee -a $service_file
         echo "Environment=\"POPM_BTC_PRIVKEY=$private_key\"" | sudo tee -a $service_file
         echo "Environment=\"POPM_STATIC_FEE=200\"" | sudo tee -a $service_file
         echo "Environment=\"POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public\"" | sudo tee -a $service_file
