@@ -1,5 +1,8 @@
 #!/bin/bash
 
+curl -s https://raw.githubusercontent.com/CryptoBuroMaster/logo/main/logo.sh | bash
+sleep 5
+
 # Function to print info messages
 print_info() {
     echo -e "\e[32m[INFO] $1\e[0m"
