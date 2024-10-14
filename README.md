@@ -55,7 +55,7 @@ Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
 To install the necessary tools for managing your Hami node, run the following command in your terminal:
 
 ```
-cd $HOME && wget https://raw.githubusercontent.com/CryptoBuroMaster/Hemi-Node/blob/main/hami.sh && chmod +x hami.sh && ./hami.sh
+cd $HOME && wget https://raw.githubusercontent.com/CryptoBuroMaster/Hemi-Node/main/hami.sh && chmod +x hami.sh && ./hami.sh
 ```
 
 
