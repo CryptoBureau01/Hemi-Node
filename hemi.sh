@@ -16,8 +16,8 @@ setup_node() {
     sudo apt-get update && sudo apt-get install -y jq
 
     print_info "Creating directory /root/hami..."
-    mkdir -p /root/hami
-    cd /root/hami || { print_error "Failed to change directory to /root/hami"; exit 1; }
+    mkdir -p /root/hemi
+    cd /root/hemi || { print_error "Failed to change directory to /root/hemi"; exit 1; }
 
     print_info "Downloading heminetwork..."
     wget --quiet --show-progress https://github.com/hemilabs/heminetwork/releases/download/v0.4.5/heminetwork_v0.4.5_linux_amd64.tar.gz -O heminetwork_v0.4.5_linux_amd64.tar.gz
@@ -47,9 +47,9 @@ setup_node() {
 # Function to create a wallet
 create_wallet() {
     if [ -f ~/popm-address.json ]; then
-        print_info "Aapke paas pehle se wallet hai. Copying to /root/hami..."
-        cp ~/popm-address.json /root/hami/
-        print_info "Wallet already exists at ~/popm-address.json and has been copied to /root/hami."
+        print_info "Your Wallet Copying to /root/hemi..."
+        cp ~/popm-address.json /root/hemi/
+        print_info "Wallet already exists at ~/popm-address.json and has been copied to /root/hemi."
     else
         print_info "Creating wallet..."
         ./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
@@ -59,8 +59,8 @@ create_wallet() {
         fi
         print_info "Wallet created successfully at ~/popm-address.json"
         
-        # Copy the newly created wallet to /root/hami
-        cp ~/popm-address.json /root/hami/
+        # Copy the newly created wallet to /root/hemi
+        sudo cp ~/popm-address.json /root/hemi/
         print_info "Wallet created successfully!"
     fi
 
@@ -71,10 +71,10 @@ create_wallet() {
 
 # Function to show private key
 show_priv_key() {
-    if [ -f /root/hami/popm-address.json ]; then
-        private_key=$(jq -r '.private_key' /root/hami/popm-address.json)
-        ethereum_address=$(jq -r '.ethereum_address' /root/hami/popm-address.json)
-        pubkey_hash=$(jq -r '.pubkey_hash' /root/hami/popm-address.json)
+    if [ -f /root/hemi/popm-address.json ]; then
+        private_key=$(jq -r '.private_key' /root/hemi/popm-address.json)
+        ethereum_address=$(jq -r '.ethereum_address' /root/hemi/popm-address.json)
+        pubkey_hash=$(jq -r '.pubkey_hash' /root/hemi/popm-address.json)
          print_info ""
         print_info "Your private key is: $private_key"
         print_info ""
@@ -83,7 +83,7 @@ show_priv_key() {
         print_info "Your Public Hash is: $pubkey_hash"
          print_info ""
     else
-        print_error "Wallet file not found at ~/root/hami/popm-address.json."
+        print_error "Wallet file not found at ~/root/hemi/popm-address.json."
     fi
 
     # Call the node_menu function
@@ -94,8 +94,8 @@ show_priv_key() {
 
 # Function to update service with private key
 service_update() {
-    if [ -f /root/hami/popm-address.json ]; then
-        private_key=$(jq -r '.private_key' /root/hami/popm-address.json)
+    if [ -f /root/hemi/popm-address.json ]; then
+        private_key=$(jq -r '.private_key' /root/hemi/popm-address.json)
         print_info "Setting up Hemi service with private key..."
 
         # Define the service file path
@@ -114,8 +114,8 @@ Description=Hemi testnet pop tx Service
 After=network.target
 
 [Service]
-WorkingDirectory=/root/hami/heminetwork_v0.4.5_linux_amd64
-ExecStart=/root/hami/heminetwork_v0.4.5_linux_amd64/popmd
+WorkingDirectory=/root/hemi/heminetwork_v0.4.5_linux_amd64
+ExecStart=/root/hemi/heminetwork_v0.4.5_linux_amd64/popmd
 Environment="POPM_BTC_PRIVKEY=$private_key"
 Environment="POPM_STATIC_FEE=200"
 Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
