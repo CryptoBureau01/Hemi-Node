@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -s https://raw.githubusercontent.com/CryptoBuroMaster/logo/main/logo.sh | bash
+curl -s https://raw.githubusercontent.com/CryptoBureau01/logo/main/logo.sh | bash
 sleep 5
 
 # Function to print info messages
