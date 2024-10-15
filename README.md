@@ -43,9 +43,9 @@ ________________________________________________________________________________
 | **Disk**     | 50 to 100 GB            |
 | **Bandwidth**| 10 MBit/s               |
 
-Join : [Crypto Buro Telegram](https://t.me/CryptoBuroOfficial)
+Join : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
 
-Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptoburo)
+Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptobureau01)
 
 Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
 
@@ -55,7 +55,7 @@ Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
 To install the necessary tools for managing your Hami node, run the following command in your terminal:
 
 ```
-cd $HOME && wget https://raw.githubusercontent.com/CryptoBuroMaster/Hemi-Node/main/hemi.sh && chmod +x hemi.sh && ./hemi.sh
+cd $HOME && wget https://raw.githubusercontent.com/CryptoBureau01/Hemi-Node/main/hemi.sh && chmod +x hemi.sh && ./hemi.sh
 ```
 
 
@@ -70,4 +70,4 @@ ________________________________________________________________________________
 
 
 
-Join Disussion : [Crypto Buro Telegram](https://t.me/CryptoBuroOfficial)
+Join Disussion : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
