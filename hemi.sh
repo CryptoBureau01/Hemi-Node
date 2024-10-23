@@ -23,21 +23,21 @@ setup_node() {
     cd /root/hemi || { print_error "Failed to change directory to /root/hemi"; exit 1; }
 
     print_info "Downloading heminetwork..."
-    wget --quiet --show-progress https://github.com/hemilabs/heminetwork/releases/download/v0.4.5/heminetwork_v0.4.5_linux_amd64.tar.gz -O heminetwork_v0.4.5_linux_amd64.tar.gz
+    wget --quiet --show-progress https://github.com/hemilabs/heminetwork/releases/download/v0.5.0/heminetwork_v0.5.0_linux_amd64.tar.gz -O heminetwork_v0.5.0_linux_amd64.tar.gz
     if [ $? -ne 0 ]; then
         print_error "Failed to download heminetwork."
         exit 1
     fi
 
     print_info "Extracting heminetwork..."
-    tar -xzf heminetwork_v0.4.5_linux_amd64.tar.gz
+    tar -xzf heminetwork_v0.5.0_linux_amd64.tar.gz
     if [ $? -ne 0 ]; then
         print_error "Failed to extract heminetwork."
         exit 1
     fi
 
-    print_info "Changing directory to heminetwork_v0.4.5_linux_amd64..."
-    cd heminetwork_v0.4.5_linux_amd64 || { print_error "Failed to change directory to heminetwork_v0.4.5_linux_amd64"; exit 1; }
+    print_info "Changing directory to heminetwork_v0.5.0_linux_amd64..."
+    cd heminetwork_v0.5.0_linux_amd64 || { print_error "Failed to change directory to heminetwork_v0.5.0_linux_amd64"; exit 1; }
 
     print_info "Node setup completed successfully!"
 
@@ -117,10 +117,10 @@ Description=Hemi testnet pop tx Service
 After=network.target
 
 [Service]
-WorkingDirectory=/root/hemi/heminetwork_v0.4.5_linux_amd64
-ExecStart=/root/hemi/heminetwork_v0.4.5_linux_amd64/popmd
+WorkingDirectory=/root/hemi/heminetwork_v0.5.0_linux_amd64
+ExecStart=/root/hemi/heminetwork_v0.5.0_linux_amd64/popmd
 Environment="POPM_BTC_PRIVKEY=$private_key"
-Environment="POPM_STATIC_FEE=1500"
+Environment="POPM_STATIC_FEE=1000"
 Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
 Restart=on-failure
 
