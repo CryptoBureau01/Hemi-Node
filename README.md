@@ -9,6 +9,24 @@ One Network, Powered by  Bitcoin and  Ethereum.
 
 Docs : [hemiDocs](https://docs.hemi.xyz/) | X : [x.com](https://x.com/hemi_xyz) | Site : [Hemi](https://hemi.xyz/)
 
+
+# Hemi Miner Setup
+
+## System Requirements
+
+| **Hardware** | **Minimum Requirement** |
+|--------------|-------------------------|
+| **CPU**      | 2 Cores                 |
+| **RAM**      | 2 to 4GB                |
+| **Disk**     | 50 to 100 GB            |
+| **Bandwidth**| 10 MBit/s               |
+
+Join : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
+
+Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptobureau01)
+
+Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
+
 __________________________________________________________________________________________________________________________________________
 
 
@@ -40,27 +58,6 @@ Stable coins Faucet : https://staging.aave.com/faucet/
 
 Complete Ongoing task and climb up the leaderboard 🚀
 __________________________________________________________________________________________________________________________________________
-
-
-# Hemi Miner Setup
-
-## System Requirements
-
-| **Hardware** | **Minimum Requirement** |
-|--------------|-------------------------|
-| **CPU**      | 2 Cores                 |
-| **RAM**      | 2 to 4GB                |
-| **Disk**     | 50 to 100 GB            |
-| **Bandwidth**| 10 MBit/s               |
-
-Join : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
-
-Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptobureau01)
-
-Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
-
-
-
 
 
 
