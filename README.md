@@ -60,7 +60,7 @@ ________________________________________________________________________________
 # Request faucet :
    **Hami Discord** : [Hemi Discord](https://discord.gg/hemixyz)
 
-# Check you PoP **Keystones
+# Check you PoP Keystones
 
 **Website Mined** : https://testnet.popstats.hemi.network/
 
