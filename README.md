@@ -1,14 +1,10 @@
 # Hemi-Node
 
-# HemiPoPMiner
-Btc Tx miner
-
 ### Project Intro
 Hemi is a modular blockchain built for superior scaling, security and interoperability.
 One Network, Powered by  Bitcoin and  Ethereum.
 
 Docs : [hemiDocs](https://docs.hemi.xyz/) | X : [x.com](https://x.com/hemi_xyz) | Site : [Hemi](https://hemi.xyz/)
-
 
 # Hemi Miner Setup
 
@@ -67,8 +63,5 @@ ________________________________________________________________________________
 # Check you PoP **Keystones
 
 **Website Mined** : https://testnet.popstats.hemi.network/
-__________________________________________________________________________________________________________________________________________
 
-
-
-Join Disussion : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
+**Join Disussion** : [Crypto Buro Telegram](https://t.me/CryptoBureau01)
