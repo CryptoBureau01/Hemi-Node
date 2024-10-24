@@ -11,6 +11,16 @@ Docs : [hemiDocs](https://docs.hemi.xyz/) | X : [x.com](https://x.com/hemi_xyz) 
 
 __________________________________________________________________________________________________________________________________________
 
+
+# Tool Installation Command
+
+To install the necessary tools for managing your Hami node, run the following command in your terminal:
+
+```
+cd $HOME && wget https://raw.githubusercontent.com/CryptoBureau01/Hemi-Node/main/hemi.sh && chmod +x hemi.sh && ./hemi.sh
+```
+
+
 ### Testnet 
 
 📣Hemi Incentived Testnet (Backed by Binance Labs)
@@ -50,13 +60,7 @@ Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptobureau01)
 Contabo VPS : [Contabo VPS](https://contabo.com/en/vps/)
 
 
-# Tool Installation Command
 
-To install the necessary tools for managing your Hami node, run the following command in your terminal:
-
-```
-cd $HOME && wget https://raw.githubusercontent.com/CryptoBureau01/Hemi-Node/main/hemi.sh && chmod +x hemi.sh && ./hemi.sh
-```
 
 
 
