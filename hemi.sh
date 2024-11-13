@@ -1,4 +1,4 @@
-use#!/bin/bash
+jiuse#!/bin/bash
 
 curl -s https://raw.githubusercontent.com/CryptoBureau01/logo/main/logo.sh | bash
 sleep 5
@@ -120,7 +120,7 @@ After=network.target
 WorkingDirectory=/root/hemi/heminetwork_v0.5.0_linux_amd64
 ExecStart=/root/hemi/heminetwork_v0.5.0_linux_amd64/popmd
 Environment="POPM_BTC_PRIVKEY=$private_key"
-Environment="POPM_STATIC_FEE=10000"
+Environment="POPM_STATIC_FEE=8000"
 Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
 Restart=on-failure
 
