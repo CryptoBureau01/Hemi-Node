@@ -101,6 +101,12 @@ service_update() {
         private_key=$(jq -r '.private_key' /root/hemi/popm-address.json)
         print_info "Setting up Hemi service with private key..."
 
+        # Prompt the user to enter the fee
+        read -p "Enter the fee for POPM_STATIC_FEE (default is 8000): " user_fee
+        user_fee=${user_fee:-8000} # Use default fee if the user doesn't input a value
+
+        print_info "Using POPM_STATIC_FEE=$user_fee"
+
         # Define the service file path
         service_file="/etc/systemd/system/hemid.service"
 
@@ -120,7 +126,7 @@ After=network.target
 WorkingDirectory=/root/hemi/heminetwork_v0.5.0_linux_amd64
 ExecStart=/root/hemi/heminetwork_v0.5.0_linux_amd64/popmd
 Environment="POPM_BTC_PRIVKEY=$private_key"
-Environment="POPM_STATIC_FEE=8000"
+Environment="POPM_STATIC_FEE=$user_fee"
 Environment="POPM_BFG_URL=wss://testnet.rpc.hemi.network/v1/ws/public"
 Restart=on-failure
 
@@ -136,12 +142,13 @@ EOF
         sudo systemctl start hemid
         print_info "Hemi service started successfully."
     else
-        print_error "Wallet file not found at /root/hami/popm-address.json. Cannot set up service."
+        print_error "Wallet file not found at /root/hemi/popm-address.json. Cannot set up service."
     fi
 
     # Call the node_menu function
     node_menu
 }
+
 
 
 
